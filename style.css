@@ -122,3 +122,8 @@
     width: 50px;
 
 }
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+}
