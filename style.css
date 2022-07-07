@@ -22,7 +22,7 @@
 }
 
 .menu-items li {
-    margin: 15px;
+    margin: 5px;
     font-size: 20px;
     padding: 05px;
     font-size: 18px;
@@ -126,4 +126,12 @@
 .about-container {
     display: flex;
     justify-content: space-evenly;
+}
+
+.about-image {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    transform: skewY(8deg);
+
 }
