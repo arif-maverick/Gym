@@ -83,3 +83,42 @@
     background-color: red;
     color: white;
 }
+
+.title2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.section-two {
+    margin-top: 70px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.card1 {
+    width: 350px;
+    height: 250px;
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 8px 8px 16px gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.card1:hover {
+    border: 1px solid red;
+    margin-top: -20px;
+    transition: .8ms;
+}
+
+.gym-icon {
+    width: 50px;
+
+}
