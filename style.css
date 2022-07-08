@@ -101,6 +101,16 @@
 
 }
 
+.title3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+}
+
 .card1 {
     width: 350px;
     height: 250px;
@@ -126,12 +136,72 @@
 .about-container {
     display: flex;
     justify-content: space-evenly;
+    background-color: black;
+
+    color: white;
 }
 
 .about-image {
     display: flex;
-    justify-content: space-evenly;
-    background-color: black;
-    transform: skewY(8deg);
 
+
+
+}
+
+.about-img1 img {
+    padding: 20px;
+    height: 500px;
+    margin-top: 50px;
+    transform: skewY(-15deg);
+
+}
+
+.about-img2 img {
+    padding: 20px;
+    margin-top: 50px;
+    height: 500px;
+    transform: skewY(-15deg);
+}
+
+.about-right {
+    border-top: 1px solid gray;
+    width: 600px;
+    color: white;
+}
+
+.about-use {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gray;
+    width: 600px;
+    padding: 25px;
+    font-size: 40px;
+}
+
+.about-left {
+    border-top: 1px solid rgb(239, 11, 11);
+    width: 500px;
+
+}
+
+.about-lorem {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.about-right li {
+    margin: 5px;
+    padding-left: 10px;
+}
+
+.learn-button {
+    padding: 19px 45px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
 }
