@@ -14,6 +14,8 @@
 }
 
 .menu-items {
+    display: flex;
+
 
     margin-right: 300px;
     padding: 10px;
@@ -21,8 +23,8 @@
 
 .menu-items li {
 
-    display: flex;
-    justify-content: space-between;
+
+
     list-style: none;
     margin: 5px;
     font-size: 20px;
