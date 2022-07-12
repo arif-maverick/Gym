@@ -14,7 +14,7 @@
 }
 
 .menu-items {
-    display: flex;
+
 
 
     margin-right: 300px;
@@ -24,7 +24,8 @@
 .menu-items li {
 
 
-
+    display: inline-block;
+    justify-content: space-evenly;
     list-style: none;
     margin: 5px;
     font-size: 20px;
