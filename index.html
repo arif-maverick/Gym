@@ -193,3 +193,64 @@
 </body>
 
 </html>
+
+<!-- PROGRAM test_minmax
+IMPLICIT NONE
+REAL, EXTERNAL :: func
+INTEGER :: num_steps = 200
+REAL :: first_value = -1.0, last_value = 3.0, xmin, min_value, xmax, max_value
+
+CALL minmax(func, first_value, last_value, num_steps, xmin, min_value, xmax, max_value)
+
+WRITE (*, '(A,F10.5,A,F12.5)') ' The minimum value was func(',xmin,') = ', min_value
+WRITE (*, '(A,F10.5,A,F12.5)') ' The maximum value was func(',xmax,') = ', max_value
+END PROGRAM test_minmax
+
+REAL FUNCTION func(x)
+REAL, INTENT(IN) :: x
+func = x**3 - 5.*x**2 + 5.*x + 2.
+END FUNCTION func
+
+SUBROUTINE minmax(func, first_value, last_value, num_steps, xmin, min_value, xmax, max_value)
+IMPLICIT NONE
+REAL, EXTERNAL :: func
+REAL, INTENT(IN) :: first_value, last_value
+INTEGER, INTENT(IN) :: num_steps
+REAL, INTENT(OUT) :: xmin, min_value, xmax, max_value
+INTEGER :: i
+REAL :: step_size, x, value
+
+step_size = (last_value - first_value)/REAL(num_steps)
+value = func(first_value)
+xmin = first_value
+min_value = value
+xmax = last_value
+max_value = value
+DO i = 1, num_steps
+x = first_value + step_size*REAL(i)
+value = func(x)
+IF (value > max_value) THEN
+xmax = x
+max_value = value
+END IF
+IF (value < min_value) THEN xmin=x min_value=value END IF END DO END SUBROUTINE minmax -->
+
+<!-- PROGRAM infiniteSeriesSine
+IMPLICIT NONE
+INTEGER :: i, j
+REAL :: x, trueValue, truncValue = 0, fact
+REAL, PARAMETER :: factor = 3.141593/180
+WRITE (*, '(1X,A)', ADVANCE='NO') 'Enter angle (in degree): '
+READ (*, *) x
+x = x*factor
+trueValue = SIN(x)
+WRITE (*, '(1X,A,F8.6)') ' Intrinsic: sin(x)= ', trueValue
+DO i = 1, 10
+fact = 1.0
+DO j = 1, 2*i - 1
+fact = fact*REAL(j)
+END DO
+truncValue = truncValue + ((-1)**(i - 1)*(x**(2*i - 1))/(fact))
+WRITE (*, '(1X,I2,A,F8.6)') i, ' term: sin(x)= ', truncValue
+END DO
+END PROGRAM infiniteSeriesSine -->
